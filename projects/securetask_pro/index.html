@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureTask Pro - Task Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-lock"></i> SecureTask Pro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#tasks">My Tasks</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section id="tasks" class="task-section">
+            <h2>Your Secure Tasks <i class="fas fa-clipboard-list"></i></h2>
+            <div class="task-input">
+                <input type="text" id="new-task" placeholder="Add a new secure task...">
+                <button id="add-task-btn"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+            <ul id="task-list" class="task-list">
+                </ul>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About SecureTask Pro</h2>
+            <p>SecureTask Pro is designed with your privacy in mind, offering a robust platform for managing your daily tasks. While this version demonstrates frontend functionality and local storage persistence, a full production deployment would include strong backend encryption, secure user authentication (JWT), and persistent data storage in a PostgreSQL database.</p>
+            <p>Our commitment is to combine seamless user experience with top-tier security principles, ensuring your information remains confidential and accessible only to you.</p>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Reach out to us!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SecureTask Pro. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> and a focus on security.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

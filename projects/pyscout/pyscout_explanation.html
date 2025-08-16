@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScout - Web Vulnerability Scanner</title>
+    <link rel="stylesheet" href="../../style.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for this explanation page if needed */
+        .pyscout-content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px var(--shadow-light);
+        }
+        .pyscout-content h1 {
+            color: var(--primary-blue);
+            font-family: var(--font-heading);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .pyscout-content h3 {
+            color: var(--dark-blue);
+            font-family: var(--font-heading);
+            margin-top: 30px;
+        }
+        .pyscout-content pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.95em;
+        }
+        .pyscout-content ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        .pyscout-content ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><a href="../../index.html" style="text-decoration: none; color: inherit;">Mohamed Gaber's Portfolio</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#skills">Skills</a></li>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pyscout-content">
+            <h1>PyScout: A Basic Web Vulnerability Scanner</h1>
+            <p>PyScout is a command-line interface (CLI) tool developed in Python, designed to perform fundamental web vulnerability checks. This project demonstrates my understanding of common web security flaws and how to programmatically identify them.</p>
+
+            <h3>Features:</h3>
+            <ul>
+                <li>**Reflected Cross-Site Scripting (XSS) Detection:** Identifies potential XSS vulnerabilities by injecting test payloads and checking for their reflection in the HTML response.</li>
+                <li>**Error-Based SQL Injection Detection:** Attempts to trigger database errors using SQL injection payloads, indicating potential SQLi vulnerabilities.</li>
+                <li>**Security Header Analysis:** Checks for the presence and proper configuration of essential HTTP security headers (e.g., X-Frame-Options, X-Content-Type-Options, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy).</li>
+            </ul>
+
+            <h3>How to Run PyScout:</h3>
+            <p>PyScout is a Python script that runs directly from your terminal.</p>
+            <ol>
+                <li>**Navigate to Project Directory:**
+                    <pre><code>cd D:\Coding\my-portfolio\projects\pyscout</code></pre>
+                </li>
+                <li>**Install Dependencies:** Ensure you have the `requests` library installed:
+                    <pre><code>pip install requests</code></pre>
+                </li>
+                <li>**Execute the Scan:** Run the script with the target URL using the `-u` or `--url` argument:
+                    <pre><code>python pyscout.py -u http://example.com/</code></pre>
+                    <p><strong>Note:</strong> Always ensure you have explicit permission to scan any website. For testing purposes, you can use intentionally vulnerable sites like <a href="http://testphp.vulnweb.com/" target="_blank">http://testphp.vulnweb.com/</a>.</p>
+                </li>
+            </ol>
+
+            <h3>Sample Output:</h3>
+            <p>Here's an example of PyScout detecting missing security headers:</p>
+            <img src="../project_screenshots/pyscout_screenshot.png" alt="PyScout Terminal Output" style="max-width:100%; height:auto; display:block; margin: 20px auto; border: 1px solid var(--border-color);">
+            <pre><code>
+============================================================
+[*]  Initiating PyScout Basic Scan for: http://testphp.vulnweb.com/
+[*] Checking for Reflected XSS on: http://testphp.vulnweb.com/
+[*] Checking for Error-Based SQL Injection on: http://testphp.vulnweb.com/
+[*] Checking for essential Security Headers on: http://testphp.vulnweb.com/
+[!]    [Missing Headers] Found missing security headers for http://testphp.vulnweb.com/:
+[!]        - X-Frame-Options (Purpose: Prevents Clickjacking (should be DENY or SAMEORIGIN))
+[!]        - X-Content-Type-Options (Purpose: Prevents MIME-sniffing (should be nosniff))
+[!]        - Strict-Transport-Security (Purpose: HSTS - Enforces HTTPS (should be present for HTTPS sites))
+[!]        - Content-Security-Policy (Purpose: CSP - Mitigates XSS and data injection (can be complex))
+[!]        - Referrer-Policy (Purpose: Controls referrer information (e.g., no-referrer, same-origin))
+
+============================================================
+[*] Scan Summary:
+[!]    PyScout detected 1 potential vulnerabilities:
+[!]      - Missing/Incomplete Security Headers
+============================================================
+            </code></pre>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/Yottta-apt/pyscout" class="cta-button" target="_blank">View PyScout on GitHub <i class="fab fa-github"></i></a>
+                <a href="../../index.html#projects" class="cta-button" style="margin-left: 15px;">Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mohamed Gaber. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Yottta-apt" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-g-shaheen/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

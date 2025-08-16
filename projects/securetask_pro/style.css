@@ -1,0 +1,317 @@
+:root {
+    --primary-color: #28a745; /* Green - Security/Success */
+    --secondary-color: #218838; /* Darker Green */
+    --accent-color: #ffc107; /* Amber - Warning/Highlight */
+    --background-color: #f8f9fa; /* Light Gray Background */
+    --card-bg: #ffffff; /* White Card Background */
+    --text-color-dark: #343a40; /* Dark Text */
+    --text-color-light: #ffffff; /* Light Text */
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --font-family: 'Roboto', sans-serif;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 1rem 0;
+    box-shadow: 0 3px 6px var(--shadow-light);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header h1 i {
+    color: var(--accent-color);
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 25px;
+}
+
+.header nav ul li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content Sections */
+.main-content {
+    padding: 40px 0;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    margin-bottom: 30px;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Task Section Specifics */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.task-input input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.task-input button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-input button:hover {
+    background-color: var(--secondary-color);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe; /* Slightly off-white for individual tasks */
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color); /* Emphasize security */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.task-item.completed {
+    background-color: #e6ffe6; /* Light green for completed */
+    text-decoration: line-through;
+    color: #777;
+    border-left-color: var(--secondary-color);
+}
+
+.task-item span {
+    flex-grow: 1;
+    font-size: 1.05rem;
+    word-break: break-word; /* Prevents long words from overflowing */
+}
+
+.task-actions button {
+    background-color: #6c757d; /* Grey */
+    color: var(--text-color-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.task-actions button.complete-btn {
+    background-color: #007bff; /* Blue */
+}
+
+.task-actions button.complete-btn:hover {
+    background-color: #0056b3;
+}
+
+.task-actions button.delete-btn {
+    background-color: #dc3545; /* Red */
+}
+
+.task-actions button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.task-item.completed .task-actions button.complete-btn {
+    background-color: var(--secondary-color); /* Darker green when completed */
+}
+.task-item.completed .task-actions button.complete-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* About Section */
+.about-section {
+    padding: 30px;
+    text-align: justify;
+}
+.about-section p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 30px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.contact-form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the left */
+}
+.contact-form button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+.footer p {
+    margin: 0;
+}
+.footer i {
+    color: #e74c3c; /* Red heart */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header nav ul li {
+        margin: 5px 10px;
+    }
+    section {
+        padding: 20px;
+    }
+    .task-input {
+        flex-direction: column;
+    }
+    .task-input button {
+        width: 100%;
+    }
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .task-actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .task-actions button {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .contact-form button[type="submit"] {
+        align-self: stretch;
+    }
+}

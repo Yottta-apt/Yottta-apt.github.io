@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefConnect - Recipe & Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-utensils"></i> ChefConnect</h1>
+            <nav>
+                <ul>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#meal-plan">Meal Plan</a></li>
+                    <li><a href="#add-recipe">Add Recipe</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section id="hero" class="hero-section">
+            <h2>Discover & Share Your Culinary Creations</h2>
+            <p>ChefConnect helps you organize recipes, plan meals, and connect with food enthusiasts. Your kitchen adventure starts here!</p>
+            <a href="#recipes" class="cta-button">Explore Recipes <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section id="recipes" class="recipes-section">
+            <h2>Featured Recipes <i class="fas fa-book-open"></i></h2>
+            <div id="recipe-grid" class="recipe-grid">
+                </div>
+        </section>
+
+        <section id="add-recipe" class="add-recipe-section">
+            <h2>Add Your Own Recipe <i class="fas fa-plus-circle"></i></h2>
+            <form id="add-recipe-form" class="recipe-form">
+                <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+                <textarea id="recipe-description" placeholder="Brief Description (e.g., 'Quick and flavorful...')"></textarea>
+                <textarea id="recipe-ingredients" placeholder="Ingredients (one per line)"></textarea>
+                <textarea id="recipe-instructions" placeholder="Instructions (step-by-step)"></textarea>
+                <input type="text" id="recipe-image" placeholder="Image URL (optional, e.g., https://via.placeholder.com/250x150)">
+                <input type="text" id="recipe-source" placeholder="Source/Author (optional)">
+                <button type="submit"><i class="fas fa-upload"></i> Add Recipe</button>
+            </form>
+        </section>
+
+        <section id="meal-plan" class="meal-plan-section">
+            <h2>Your Meal Plan <i class="fas fa-calendar-alt"></i></h2>
+            <p>This section would allow you to drag and drop recipes into a weekly planner. In a full version, this data would be stored in the backend.</p>
+            <div class="meal-plan-grid">
+                <div class="day-card"><h4>Monday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Tuesday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Wednesday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Thursday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Friday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Saturday</h4><p>No plan yet</p></div>
+                <div class="day-card"><h4>Sunday</h4><p>No plan yet</p></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About ChefConnect</h2>
+            <p>ChefConnect aims to be your go-to platform for all things culinary. This demo showcases the interactive frontend, allowing you to add and browse recipes, with data persisting in your browser's local storage.</p>
+            <p>A complete ChefConnect application would feature a robust Node.js backend with Express.js for API handling, a MongoDB database for scalable recipe and user data storage, and advanced user authentication. We are passionate about creating a vibrant community where food lovers can share and organize their passion for cooking.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ChefConnect. All rights reserved.</p>
+            <p>Happy Cooking! <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
