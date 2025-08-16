@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Gaber's Portfolio - Full-Stack & Cybersecurity</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Mohamed Gaber's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Hello, I'm Mohamed Gaber</h2>
+                <p class="tagline">An **Aspiring Full-Stack Developer** with a fervent **passion for cybersecurity**.</p>
+                <p>Driven to build robust and secure web applications, my journey involves mastering both intuitive user interfaces and resilient backend systems, always with a keen eye on protecting digital assets.</p>
+                <a href="#projects" class="cta-button">View My Work <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2><i class="fas fa-user-circle"></i> About Me</h2>
+                <p>I thrive at the intersection of development and security, constantly seeking to understand how systems are built and how they can be made more resilient against threats. My approach combines creative problem-solving with a methodical dedication to secure coding practices and vulnerability assessment.</p>
+                <p>I'm continuously expanding my expertise in modern web technologies and cybersecurity methodologies, eager to contribute to innovative projects that prioritize both functionality and impregnable defense.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2><i class="fas fa-code"></i> My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fab fa-js-square"></i> JavaScript</li>
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <ul>
+                            <li><i class="fas fa-server"></i> Flask</li>
+                            <li><i class="fab fa-react"></i> React (Exploring)</li>
+                            <li><i class="fab fa-node-js"></i> Node.js (Exploring)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li><i class="fas fa-database"></i> PostgreSQL (Exploring)</li>
+                            <li><i class="fas fa-database"></i> MongoDB (Exploring)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Concepts</h3>
+                        <ul>
+                            <li><i class="fas fa-git-alt"></i> Git & GitHub</li>
+                            <li><i class="fas fa-laptop-code"></i> VS Code</li>
+                            <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+                            <li><i class="fas fa-bug"></i> Vulnerability Assessment</li>
+                            <li><i class="fas fa-network-wired"></i> Networking</li>
+                            <li><i class="fab fa-linux"></i> Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2><i class="fas fa-folder-open"></i> My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="projects/project_screenshots/securetask_pro_screenshot.png" alt="SecureTask Pro Screenshot">
+                        <div class="card-content">
+                            <h3>SecureTask Pro</h3>
+                            <p>An encrypted task management system focusing on data privacy and robust frontend interactivity with local storage persistence.</p>
+                            <div class="project-links">
+                                <a href="projects/securetask_pro/index.html" class="btn-demo" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Yottta-apt/securetask-pro" class="btn-github" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="projects/project_screenshots/pyscout_screenshot.png" alt="PyScout Screenshot">
+                        <div class="card-content">
+                            <h3>PyScout</h3>
+                            <p>A Python-based command-line tool for basic web vulnerability scanning (XSS, SQLi, Security Headers).</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Yottta-apt/pyscout" class="btn-github" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                <a href="projects/pyscout/pyscout_explanation.html" class="btn-demo">Learn More <i class="fas fa-info-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="projects/project_screenshots/chefconnect_screenshot.png" alt="ChefConnect Screenshot">
+                        <div class="card-content">
+                            <h3>ChefConnect</h3>
+                            <p>A dynamic recipe sharing and meal planner featuring interactive UI and local storage for recipe persistence.</p>
+                            <div class="project-links">
+                                <a href="projects/chefconnect/index.html" class="btn-demo" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Yottta-apt/chefconnect" class="btn-github" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:dev3mohamed@gmail.com" class="contact-button"><i class="fas fa-at"></i> Email Me</a>
+                    <a href="https://www.linkedin.com/in/muhammad-g-shaheen/" class="contact-button" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Yottta-apt" class="contact-button" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mohamed Gaber. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Yottta-apt" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-g-shaheen/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
